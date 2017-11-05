@@ -26,7 +26,7 @@ class GrupoController extends Controller
      */
     public function create()
     {
-        //
+        return view('Grupo.Create');
     }
 
     /**

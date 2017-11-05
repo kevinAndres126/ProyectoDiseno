@@ -17,7 +17,7 @@
                     <h3 class="panel-title">Group Panel</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
-                    <button type="button" class="btn btn-sm btn-primary btn-create">Create New</button>
+                    <button href="{{ route('Grupos') }}" type="button" class="btn btn-sm btn-primary btn-create">Create New</button>
                   </div>
                 </div>
               </div>
