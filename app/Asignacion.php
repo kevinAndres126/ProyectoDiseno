@@ -8,5 +8,5 @@ class Asignacion extends Model
 {
     protected $table = "asignacion";
 
-    protected $fillable = ['codigo','nombre','descripcion','tipo','fechaCreacion','fechaEntrega','valor','calificacion'];
+    protected $fillable = ['id','nombre','descripcion','tipo','fechaCreacion','fechaEntrega','valor','calificacion'];
 }

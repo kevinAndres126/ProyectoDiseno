@@ -14,7 +14,7 @@ class AsignacionController extends Controller
      */
     public function index()
     {
-        $Asignacion = Asignacion::orderBy('codigo','ASC')->paginate(10);
+        $Asignacion = Asignacion::orderBy('id','ASC')->paginate(10);
         return view('Asignacion.AsignacionMain')->with('Asignacion',$Asignacion);
     }
 
