@@ -15,7 +15,12 @@ class AsignacionController extends Controller
     public function index()
     {
         $Asignacion = Asignacion::orderBy('id','ASC')->paginate(10);
+        if ($Asignacion->'tipo' == 'Tarea') {
+            # code...
+            return view('Tarea.TableTarea')->with('Asignacion',$Asignacion);
+        }
         return view('Asignacion.AsignacionMain')->with('Asignacion',$Asignacion);
+        
     }
 
     /**

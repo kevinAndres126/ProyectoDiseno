@@ -21,15 +21,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('Grupo','GrupoController');
 
-Route::resource('Asignacion','AsignacionController');
 
+Route::group(['prefix'=> 'Asignacion'], function(){
 
-
-Route::group(['prefix'=> 'Grupo'], function(){
-
-	Route::resource('Tarea','TareaController');
-	Route::get('Tarea/{id}/destroy',[
-		'uses' => 'TareaController@destroy',
-		'as'   => 'Grupo.Tarea.destroy'
+	Route::resource('Asignacion','AsignacionController');
+	Route::get('Asignacion/{id}/destroy',[
+		'uses' => 'AsignacionController@destroy',
+		'as'   => 'Asignacion.Asignacion.destroy'
  		]);
 });
