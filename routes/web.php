@@ -19,7 +19,15 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('Grupo','GrupoController');
+
+Route::group(['prefix'=> 'Grupos'], function(){
+
+  Route::resource('Grupos','GrupoController');
+  Route::get('Grupo/{id}/destroy',[
+    'uses' => 'GrupoController@destroy',
+    'as'   => 'admin.promociones.destroy'
+    ]);
+});
 
 
 Route::group(['prefix'=> 'Asignacion'], function(){
