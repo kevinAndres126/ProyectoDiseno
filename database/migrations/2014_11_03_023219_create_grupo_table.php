@@ -17,9 +17,7 @@ class CreateGrupoTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('descripcion');
-            $table->integer('id_asignacion')->unsigned();
             $table->integer('id_persona')->unsigned();
-            $table->foreign('id_asignacion')->references('id')->on('asignacion');
             $table->foreign('id_persona')->references('id')->on('users');
             $table->timestamps();
         });

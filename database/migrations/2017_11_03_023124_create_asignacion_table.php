@@ -22,6 +22,8 @@ class CreateAsignacionTable extends Migration
             $table->date('fechaEntrega');
             $table->integer('valor');
             $table->integer('calificacion');
+            $table->integer('id_grupo')->unsigned();
+            $table->foreign('id_grupo')->references('id')->on('grupo');
             $table->timestamps();
         });
     }
