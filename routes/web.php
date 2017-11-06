@@ -38,3 +38,4 @@ Route::group(['prefix'=> 'Asignacion'], function(){
 		'as'   => 'Asignacion.Asignacion.destroy'
  		]);
 });
+

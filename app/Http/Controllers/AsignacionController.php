@@ -15,7 +15,18 @@ class AsignacionController extends Controller
     public function index()
     {
         $Asignacion = Asignacion::orderBy('id','ASC')->paginate(10);
+
+        #for ($i=0; $i < count($Asignacion) ; $i++) { 
+
+           # if ($Asignacion[$i]['tipo'] == 'Tarea') {
+
+          #      return view('Tarea.TableTarea')->with('Asignacion',$Asignacion);        
+         #   }
+        #    return view('Asignacion.AsignacionMain')->with('Asignacion',$Asignacion);
+       # }
+
         return view('Asignacion.AsignacionMain')->with('Asignacion',$Asignacion);
+
     }
 
     /**
