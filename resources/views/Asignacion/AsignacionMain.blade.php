@@ -1,31 +1,183 @@
-
 @extends('layouts.app')
 
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+@section('content')
 
-    </div>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="{{url('admin/clientes')}}">Clientes</a></li>
-        <li><a href="{{url('admin/productos')}}">Productos</a></li>
-        <li><a href="{{url('admin/inventarios')}}">Inventarios</a></li>
-        <li><a href="{{url('admin/movInventarios')}}">Movimiento Inventario</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-10 col-md-offset-1">
+
+            <div class="panel panel-default panel-table">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col col-xs-6">
+                    <h3 class="panel-title">HomeWork Panel</h3>
+                  </div>
+                  <div class="col col-xs-6 text-right">
+                    <button type="button" class="btn btn-sm btn-primary btn-create">Create New</button>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-body">
+                <table class="table table-striped table-bordered table-list">
+                  <thead>
+                    <tr>
+                        <th><em class="fa fa-cog"></em></th>
+                        <th class="hidden-xs">ID</th>
+                        <th>Name</th>
+                        <th>Descripcion</th>
+                        <th>watch</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                    @foreach($Asignacion as $Asignacions)
+                      <?php if ($Asignacions['tipo'] == 'Tarea'): ?>
+                            <tr>
+                              <td align="center">
+                                <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                                <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                              </td>
+                              <td class="hidden-xs">{{$Asignacions->tipo}}</td>
+                              <td>{{$Asignacions->tipo}}</td>
+                              <td>{{$Asignacions->tipo}}</td>
+                              <td align="center">
+                                <a class="btn btn-default"><em class="fa fa-eye"></em></a>
+                              </td>
+                            </tr>
+
+                        <?php endif ?>
+
+                      @endforeach
+                    </tbody>
+                </table>
+
+              </div>
+
+            </div>
+
+</div></div></div>
 
 
 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-10 col-md-offset-1">
+
+            <div class="panel panel-default panel-table">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col col-xs-6">
+                    <h3 class="panel-title">Proyect Panel</h3>
+                  </div>
+                  <div class="col col-xs-6 text-right">
+                    <button type="button" class="btn btn-sm btn-primary btn-create">Create New</button>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-body">
+                <table class="table table-striped table-bordered table-list">
+                  <thead>
+                    <tr>
+                        <th><em class="fa fa-cog"></em></th>
+                        <th class="hidden-xs">ID</th>
+                        <th>Name</th>
+                        <th>Descripcion</th>
+                        <th>watch</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                    @foreach($Asignacion as $Asignacions)
+                      <?php if ($Asignacions['tipo'] == 'Proyecto'): ?>
+                            <tr>
+                              <td align="center">
+                                <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                                <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                              </td>
+                              <td class="hidden-xs">{{$Asignacions->tipo}}</td>
+                              <td>{{$Asignacions->tipo}}</td>
+                              <td>{{$Asignacions->tipo}}</td>
+                              <td align="center">
+                                <a class="btn btn-default"><em class="fa fa-eye"></em></a>
+                              </td>
+                            </tr>
+
+                        <?php endif ?>
+
+                      @endforeach
+                    </tbody>
+                </table>
+
+              </div>
+
+            </div>
+
+</div></div></div>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-10 col-md-offset-1">
+
+            <div class="panel panel-default panel-table">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col col-xs-6">
+                    <h3 class="panel-title">Assignments Panel</h3>
+                  </div>
+                  <div class="col col-xs-6 text-right">
+                    <button type="button" class="btn btn-sm btn-primary btn-create">Create New</button>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-body">
+                <table class="table table-striped table-bordered table-list">
+                  <thead>
+                    <tr>
+                        <th><em class="fa fa-cog"></em></th>
+                        <th class="hidden-xs">ID</th>
+                        <th>Name</th>
+                        <th>Descripcion</th>
+                        <th>watch</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                    @foreach($Asignacion as $Asignacions)
+                      <?php if ($Asignacions['tipo'] == 'Asignacion'): ?>
+                            <tr>
+                              <td align="center">
+                                <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                                <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                              </td>
+                              <td class="hidden-xs">{{$Asignacions->tipo}}</td>
+                              <td>{{$Asignacions->tipo}}</td>
+                              <td>{{$Asignacions->tipo}}</td>
+                              <td align="center">
+                                <a class="btn btn-default"><em class="fa fa-eye"></em></a>
+                              </td>
+                            </tr>
+
+                        <?php endif ?>
+
+                      @endforeach
+                    </tbody>
+                </table>
+
+              </div>
+
+            </div>
+
+</div></div></div>
+
+
+@endsection
