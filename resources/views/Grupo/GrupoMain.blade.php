@@ -14,10 +14,10 @@
               <div class="panel-heading">
                 <div class="row">
                   <div class="col col-xs-6">
-                    <h3 class="panel-title">Group Panel</h3>
+                    <h3 class="panel-title">Grupos</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
-                    <button href="{{ route('Grupos') }}" type="button" class="btn btn-sm btn-primary btn-create">Create New</button>
+                    <button href="{{ url('/Grupos/Grupos/create') }}" type="button" class="btn btn-sm btn-primary btn-create">Crear Nuevo Grupo</button>
                   </div>
                 </div>
               </div>
