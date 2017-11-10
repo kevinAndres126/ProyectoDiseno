@@ -18,8 +18,8 @@ class CreateAsignacionTable extends Migration
             $table->string('nombre');
             $table->string('descripcion');
             $table->string('tipo');
-            $table->date('fechaCreacion');
-            $table->date('fechaEntrega');
+            $table->string('fechaCreacion');
+            $table->string('fechaEntrega');
             $table->integer('valor');
             $table->integer('calificacion');
             $table->integer('id_grupo')->unsigned();

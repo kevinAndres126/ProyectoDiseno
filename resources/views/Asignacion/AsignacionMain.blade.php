@@ -17,7 +17,8 @@
                     <h3 class="panel-title">Panel Tareas</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
-                    <button type="button" class="btn btn-sm btn-primary btn-create">Crear Nueva Tarea</button>
+                    <a href="{{route('Asignacion.create')}}" class="btn btn-primary">
+                    Crear Nueva Tarea</a><br>
                   </div>
                 </div>
               </div>
@@ -63,8 +64,6 @@
 
 
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
-
 <div class="container">
     <div class="row">
 
@@ -77,7 +76,8 @@
                     <h3 class="panel-title">Panel Proyectos</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
-                    <button type="button" class="btn btn-sm btn-primary btn-create">Crear Nuevo Proyecto</button>
+                    <a href="{{route('Asignacion.create')}}" class="btn btn-primary">
+                    Crear Nueva Proyecto</a><br>
                   </div>
                 </div>
               </div>
@@ -121,8 +121,6 @@
 
 </div></div></div>
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
-
 <div class="container">
     <div class="row">
 
@@ -135,7 +133,8 @@
                     <h3 class="panel-title">Panel Asignaciones</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
-                    <button type="button" class="btn btn-sm btn-primary btn-create">Crear Nueva Asignacion</button>
+                    <a href="{{route('Asignacion.create')}}" class="btn btn-primary">
+                    Crear Nueva Asignacion</a><br>
                   </div>
                 </div>
               </div>

@@ -36,7 +36,8 @@ class AsignacionController extends Controller
      */
     public function create()
     {
-        //
+        
+        return view('Asignacion.CrearAsignacion');
     }
 
     /**
@@ -48,6 +49,10 @@ class AsignacionController extends Controller
     public function store(Request $request)
     {
         //
+        $Asignacion = new Asignacion($request->all());
+        $Asignacion -> save();
+        
+        return redirect()->route('Asignacion.index');
     }
 
     /**
