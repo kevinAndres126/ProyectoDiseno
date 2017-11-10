@@ -46,7 +46,7 @@
                               <td>{{$Asignacions->nombre}}</td>
                               <td>{{$Asignacions->descripcion}}</td>
                               <td align="center">
-                                <a class="btn btn-default"><em class="fa fa-eye"></em></a>
+                                <a href="{{route('Asignacion.show',$Asignacions->id)}}"  class="btn btn-default"><em class="fa fa-eye"></em></a>
                               </td>
                             </tr>
 
@@ -105,7 +105,7 @@
                               <td>{{$Asignacions->nombre}}</td>
                               <td>{{$Asignacions->descripcion}}</td>
                               <td align="center">
-                                <a class="btn btn-default"><em class="fa fa-eye"></em></a>
+                                <a href="{{route('Asignacion.show',$Asignacions->id)}}"  class="btn btn-default"><em class="fa fa-eye"></em></a>
                               </td>
                             </tr>
 
@@ -162,7 +162,7 @@
                               <td>{{$Asignacions->nombre}}</td>
                               <td>{{$Asignacions->descripcion}}</td>
                               <td align="center">
-                                <a class="btn btn-default"><em class="fa fa-eye"></em></a>
+                                <a href="{{route('Asignacion.show',$Asignacions->id)}}" class="btn btn-default"><em class="fa fa-eye"></em></a>
                               </td>
                             </tr>
 

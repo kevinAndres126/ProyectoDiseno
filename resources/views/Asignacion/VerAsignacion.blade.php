@@ -10,7 +10,7 @@
                 <div class="panel-heading">Editar Asignacion</div>
                 <div class="panel-body">
                 	
-				{!!Form::open(['route'=>['Asignacion.update',$Asignacion->id],'method'=>'PUT']) !!}
+				{!!Form::open(['route'=>['Asignacion.show',$Asignacion->id],'method'=>'PUT']) !!}
 
 						<div class="form-group">
 							{!!Form::label('Nombre','Nombre')!!}
@@ -50,8 +50,10 @@
 						</div>
 
 						<div class="form-group">
-							{!!Form::submit('GuardarAsignacion',['class'=>'btn btn-primary'])!!}
+							{!!Form::close('GuardarAsignacion',['class'=>'btn btn-primary'])!!}
 						</div>
+						<a href="{{route('Asignacion.index')}}" class="btn btn-primary">
+                    	backk</a><br>
 
 					{!!Form::close() !!}
                 </div>

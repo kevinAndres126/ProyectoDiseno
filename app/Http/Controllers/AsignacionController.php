@@ -64,6 +64,8 @@ class AsignacionController extends Controller
     public function show($id)
     {
         //
+        $Asignacion =Asignacion::find($id);
+        return view('Asignacion.VerAsignacion')->with('Asignacion',$Asignacion);
     }
 
     /**
@@ -77,6 +79,7 @@ class AsignacionController extends Controller
         //
         $Asignacion =Asignacion::find($id);
         return view('Asignacion.EditarAsignacion')->with('Asignacion',$Asignacion);
+        return redirect()->route('Asignacion.index');
     }
 
     /**
