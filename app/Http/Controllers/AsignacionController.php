@@ -14,7 +14,7 @@ class AsignacionController extends Controller
      */
     public function index()
     {
-        $Asignacion = Asignacion::orderBy('id','ASC')->paginate(10);
+        $Asignacion = Asignacion::orderBy('id','ASC')->paginate(100);
 
         #for ($i=0; $i < count($Asignacion) ; $i++) { 
 
@@ -75,6 +75,8 @@ class AsignacionController extends Controller
     public function edit($id)
     {
         //
+        $Asignacion =Asignacion::find($id);
+        return view('Asignacion.EditarAsignacion')->with('Asignacion',$Asignacion);
     }
 
     /**
@@ -87,6 +89,18 @@ class AsignacionController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $Asignacion = Asignacion::find($id);
+        $Asignacion ->nombre = $request->nombre;
+        $Asignacion ->descripcion = $request->descripcion;
+        $Asignacion ->tipo = $request->tipo;
+        $Asignacion ->fechaCreacion = $request->fechaCreacion;
+        $Asignacion ->fechaEntrega  = $request->fechaEntrega;
+        $Asignacion ->valor = $request->valor;
+        $Asignacion ->calificacion = $request->calificacion;
+        $Asignacion ->id_grupo = $request->id_grupo;
+        $Asignacion ->save();
+
+        return redirect()->route('Asignacion.index');
     }
 
     /**
@@ -98,5 +112,9 @@ class AsignacionController extends Controller
     public function destroy($id)
     {
         //
+
+        $Asignacion = Asignacion::find($id);
+        $Asignacion ->delete();
+        return redirect()->route('Asignacion.index');
     }
 }

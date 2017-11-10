@@ -39,8 +39,8 @@
                       <?php if ($Asignacions['tipo'] == 'Tarea'): ?>
                             <tr>
                               <td align="center">
-                                <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                                <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                                <a href="{{route('Asignacion.edit',$Asignacions->id)}}" class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                                <a href="{{route('Asignacion.Asignacion.destroy',$Asignacions->id)}}" onclick="return confirm('¿Seguro que seas eliminar?')" class="btn btn-danger"><em class="fa fa-trash"></em></a>
                               </td>
                               <td class="hidden-xs">{{$Asignacions->tipo}}</td>
                               <td>{{$Asignacions->nombre}}</td>
@@ -98,8 +98,8 @@
                       <?php if ($Asignacions['tipo'] == 'Proyecto'): ?>
                             <tr>
                               <td align="center">
-                                <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                                <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                                <a href="{{route('Asignacion.edit',$Asignacions->id)}}" class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                                <a href="{{route('Asignacion.Asignacion.destroy',$Asignacions->id)}}" onclick="return confirm('¿Seguro que seas eliminar?')" class="btn btn-danger"><em class="fa fa-trash"></em></a>
                               </td>
                               <td class="hidden-xs">{{$Asignacions->tipo}}</td>
                               <td>{{$Asignacions->nombre}}</td>
@@ -155,8 +155,8 @@
                       <?php if ($Asignacions['tipo'] == 'Asignacion'): ?>
                             <tr>
                               <td align="center">
-                                <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                                <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                                <a href="{{route('Asignacion.edit',$Asignacions->id)}}" class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                                <a href="{{route('Asignacion.Asignacion.destroy',$Asignacions->id)}}" onclick="return confirm('¿Seguro que seas eliminar?')" class="btn btn-danger"><em class="fa fa-trash"></em></a>
                               </td>
                               <td class="hidden-xs">{{$Asignacions->tipo}}</td>
                               <td>{{$Asignacions->nombre}}</td>
