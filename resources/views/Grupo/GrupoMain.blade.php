@@ -17,7 +17,8 @@
                     <h3 class="panel-title">Grupos</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
-                    <button href="{{ url('/Grupos/Grupos/create') }}" type="button" class="btn btn-sm btn-primary btn-create">Crear Nuevo Grupo</button>
+                    <a href="{{route('Grupo.create')}}" class="btn btn-primary">
+                    Crear Nuevo Grupo</a><br>
                   </div>
                 </div>
               </div>
@@ -36,14 +37,14 @@
                     @foreach($Grupo as $Grupos)
                           <tr>
                             <td align="center">
-                              <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                              <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                              <a href="{{route('Grupo.edit',$Grupos->id)}}" class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                              <a href="{{route('Grupo.destroy',$Grupos->id)}}" onclick="return confirm('¿Seguro que seas eliminar?')" class="btn btn-danger"><em class="fa fa-trash"></em></a>
                             </td>
                             <td class="hidden-xs">{{$Grupos->id}}</td>
                             <td>{{$Grupos->nombre}}</td>
                             <td>{{$Grupos->descripcion}}</td>
                             <td align="center">
-                              <a class="btn btn-default"><em class="fa fa-eye"></em></a>
+                              <a href="{{route('Grupo.show',$Grupos->id)}}" class="btn btn-default"><em class="fa fa-eye"></em></a>
                             </td>
                           </tr>
                     @endforeach

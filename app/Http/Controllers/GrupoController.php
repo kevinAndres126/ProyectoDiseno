@@ -15,7 +15,7 @@ class GrupoController extends Controller
     public function index()
     {
 
-        $Grupo = Grupo::orderBy('id','ASC')->paginate(10);
+        $Grupo = Grupo::orderBy('id','ASC')->paginate(100);
         return view('Grupo.GrupoMain')->with('Grupo',$Grupo);
     }
 
@@ -38,6 +38,10 @@ class GrupoController extends Controller
     public function store(Request $request)
     {
         //
+        $Grupo = new Grupo($request->all());
+        $Grupo -> save();
+        
+        return redirect()->route('Grupo.index');
     }
 
     /**
@@ -49,6 +53,8 @@ class GrupoController extends Controller
     public function show($id)
     {
         //
+        $Grupo =Grupo::find($id);
+        return view('Grupo.Ver')->with('Grupo',$Grupo);
     }
 
     /**
@@ -60,6 +66,8 @@ class GrupoController extends Controller
     public function edit($id)
     {
         //
+        $Grupo =Grupo::find($id);
+        return view('Grupo.Editar')->with('Grupo',$Grupo);
     }
 
     /**
@@ -72,6 +80,13 @@ class GrupoController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $Grupo = Grupo::find($id);
+        $Grupo ->nombre = $request->nombre;
+        $Grupo ->descripcion = $request->descripcion;
+        $Grupo ->id_persona = $request->id_persona;
+        $Grupo ->save();
+
+        return redirect()->route('Grupo.index');
     }
 
     /**
@@ -83,5 +98,8 @@ class GrupoController extends Controller
     public function destroy($id)
     {
         //
+        $Grupo = Grupo::find($id);
+        $Grupo ->delete();
+        return redirect()->route('Grupo.index');
     }
 }

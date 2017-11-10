@@ -20,12 +20,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::group(['prefix'=> 'Grupos'], function(){
+Route::group(['prefix'=> 'Grupo'], function(){
 
-  Route::resource('Grupos','GrupoController');
+  Route::resource('Grupo','GrupoController');
   Route::get('Grupo/{id}/destroy',[
     'uses' => 'GrupoController@destroy',
-    'as'   => 'admin.promociones.destroy'
+    'as'   => 'Grupo.destroy'
     ]);
 });
 
@@ -35,7 +35,7 @@ Route::group(['prefix'=> 'Asignacion'], function(){
 	Route::resource('Asignacion','AsignacionController');
 	Route::get('Asignacion/{id}/destroy',[
 		'uses' => 'AsignacionController@destroy',
-		'as'   => 'Asignacion.Asignacion.destroy'
+		'as'   => 'Asignacion.destroy'
  		]);
 });
 
