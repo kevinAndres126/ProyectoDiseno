@@ -14,10 +14,10 @@
               <div class="panel-heading">
                 <div class="row">
                   <div class="col col-xs-6">
-                    <h3 class="panel-title">HomeWork Panel</h3>
+                    <h3 class="panel-title">Panel Tareas</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
-                    <button type="button" class="btn btn-sm btn-primary btn-create">Create New</button>
+                    <button type="button" class="btn btn-sm btn-primary btn-create">Crear Nueva Tarea</button>
                   </div>
                 </div>
               </div>
@@ -27,9 +27,9 @@
                     <tr>
                         <th><em class="fa fa-cog"></em></th>
                         <th class="hidden-xs">ID</th>
-                        <th>Name</th>
+                        <th>Nombre</th>
                         <th>Descripcion</th>
-                        <th>watch</th>
+                        <th></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -42,8 +42,8 @@
                                 <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
                               </td>
                               <td class="hidden-xs">{{$Asignacions->tipo}}</td>
-                              <td>{{$Asignacions->tipo}}</td>
-                              <td>{{$Asignacions->tipo}}</td>
+                              <td>{{$Asignacions->nombre}}</td>
+                              <td>{{$Asignacions->descripcion}}</td>
                               <td align="center">
                                 <a class="btn btn-default"><em class="fa fa-eye"></em></a>
                               </td>
@@ -74,10 +74,10 @@
               <div class="panel-heading">
                 <div class="row">
                   <div class="col col-xs-6">
-                    <h3 class="panel-title">Proyect Panel</h3>
+                    <h3 class="panel-title">Panel Proyectos</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
-                    <button type="button" class="btn btn-sm btn-primary btn-create">Create New</button>
+                    <button type="button" class="btn btn-sm btn-primary btn-create">Crear Nuevo Proyecto</button>
                   </div>
                 </div>
               </div>
@@ -87,9 +87,9 @@
                     <tr>
                         <th><em class="fa fa-cog"></em></th>
                         <th class="hidden-xs">ID</th>
-                        <th>Name</th>
+                        <th>Nombre</th>
                         <th>Descripcion</th>
-                        <th>watch</th>
+                        <th></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -102,8 +102,8 @@
                                 <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
                               </td>
                               <td class="hidden-xs">{{$Asignacions->tipo}}</td>
-                              <td>{{$Asignacions->tipo}}</td>
-                              <td>{{$Asignacions->tipo}}</td>
+                              <td>{{$Asignacions->nombre}}</td>
+                              <td>{{$Asignacions->descripcion}}</td>
                               <td align="center">
                                 <a class="btn btn-default"><em class="fa fa-eye"></em></a>
                               </td>
@@ -132,10 +132,10 @@
               <div class="panel-heading">
                 <div class="row">
                   <div class="col col-xs-6">
-                    <h3 class="panel-title">Assignments Panel</h3>
+                    <h3 class="panel-title">Panel Asignaciones</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
-                    <button type="button" class="btn btn-sm btn-primary btn-create">Create New</button>
+                    <button type="button" class="btn btn-sm btn-primary btn-create">Crear Nueva Asignacion</button>
                   </div>
                 </div>
               </div>
@@ -145,9 +145,9 @@
                     <tr>
                         <th><em class="fa fa-cog"></em></th>
                         <th class="hidden-xs">ID</th>
-                        <th>Name</th>
+                        <th>Nombre</th>
                         <th>Descripcion</th>
-                        <th>watch</th>
+                        <th></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -160,8 +160,8 @@
                                 <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
                               </td>
                               <td class="hidden-xs">{{$Asignacions->tipo}}</td>
-                              <td>{{$Asignacions->tipo}}</td>
-                              <td>{{$Asignacions->tipo}}</td>
+                              <td>{{$Asignacions->nombre}}</td>
+                              <td>{{$Asignacions->descripcion}}</td>
                               <td align="center">
                                 <a class="btn btn-default"><em class="fa fa-eye"></em></a>
                               </td>

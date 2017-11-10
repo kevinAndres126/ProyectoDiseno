@@ -29,7 +29,7 @@
                         <th class="hidden-xs">ID</th>
                         <th>Name</th>
                         <th>Descripcion</th>
-                        <th>watch</th>
+                        <th></th>
                     </tr>
                   </thead>
                   <tbody>
