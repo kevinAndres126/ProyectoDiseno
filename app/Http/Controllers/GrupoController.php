@@ -12,10 +12,10 @@ class GrupoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
 
-        $Grupo = Grupo::orderBy('id','ASC')->paginate(100);
+        $Grupo = Grupo::Search($request->nombre)->orderBy('id','ASC')->paginate(100);
         return view('Grupo.GrupoMain')->with('Grupo',$Grupo);
     }
 

@@ -20,6 +20,15 @@
                     <a href="{{route('Grupo.create')}}" class="btn btn-primary">
                     Crear Nuevo Grupo</a><br>
                   </div>
+
+                  {!!Form::open(['route'=>'Grupo.index','method'=>'GET', 'class'=>'navbar-form pull-center']) !!}
+                    <div class="input-group">
+                       {!!Form::text('nombre',null,['class'=>'form-control','placeholder' => 'Buscar','aria-describedby'=> 'search']) !!}
+
+                       <span class="input-group-addon" id="search"><span class="fa fa-search" aria-hidden="true"></span></span>
+                    </div>
+                  {!!Form::close() !!}
+
                 </div>
               </div>
               <div class="panel-body">
