@@ -30,6 +30,7 @@
                   {!!Form::close() !!}
 
                 </div>
+
               </div>
               <div class="panel-body">
                 <table class="table table-striped table-bordered table-list">
@@ -45,6 +46,29 @@
                   <tbody>
                     @foreach($Grupo as $Grupos)
                           <tr>
+                                                             <div class="col-lg-4" >
+                                  <div class="panel panel-primary" >
+                                      <div class="panel-heading">
+                                        <a href="{{route('Grupo.show',$Grupos->id)}}">
+                                            {{$Grupos->nombre}}
+                                        </a>
+                                          
+                                      </div>
+                                      <div class="panel-body">
+                                          {{$Grupos->descripcion}}
+                                      </div>
+                                      <div class="panel-footer">
+                                          <a href="{{route('Grupo.edit',$Grupos->id)}}" class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                                          <a href="{{route('Grupo.destroy',$Grupos->id)}}" onclick="return confirm('¿Seguro que seas eliminar?')" class="btn btn-danger"><em class="fa fa-trash"></em></a>
+
+                                          <a href="{{route('Grupo.show',$Grupos->id)}}">
+                                            
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+
+
                             <td align="center">
                               <a href="{{route('Grupo.edit',$Grupos->id)}}" class="btn btn-default"><em class="fa fa-pencil"></em></a>
                               <a href="{{route('Grupo.destroy',$Grupos->id)}}" onclick="return confirm('¿Seguro que seas eliminar?')" class="btn btn-danger"><em class="fa fa-trash"></em></a>
@@ -55,6 +79,8 @@
                             <td align="center">
                               <a href="{{route('Grupo.show',$Grupos->id)}}" class="btn btn-default"><em class="fa fa-eye"></em></a>
                             </td>
+
+
                           </tr>
                     @endforeach
                     </tbody>
