@@ -33,7 +33,7 @@
 							{!!Form::close('GuardarAsignacion',['class'=>'btn btn-primary'])!!}
 						</div>
 						<a href="{{route('Grupo.index')}}" class="btn btn-primary">
-                    	backk</a><br>
+                    	Back</a><br>
 
 					{!!Form::close() !!}
                 </div>

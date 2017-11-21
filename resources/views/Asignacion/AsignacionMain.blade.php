@@ -14,7 +14,7 @@
               <div class="panel-heading">
                 <div class="row">
                   <div class="col col-xs-6">
-                    <h3 class="panel-title">Panel Tareas</h3>
+                    <h3 class="panel-title">Tareas</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
                     <a href="{{route('Asignacion.create')}}" class="btn btn-primary">
@@ -42,7 +42,7 @@
                                 <a href="{{route('Asignacion.edit',$Asignacions->id)}}" class="btn btn-default"><em class="fa fa-pencil"></em></a>
                                 <a href="{{route('Asignacion.destroy',$Asignacions->id)}}" onclick="return confirm('¿Seguro que seas eliminar?')" class="btn btn-danger"><em class="fa fa-trash"></em></a>
                               </td>
-                              <td class="hidden-xs">{{$Asignacions->tipo}}</td>
+                              <td class="hidden-xs">{{$Asignacions->id}}</td>
                               <td>{{$Asignacions->nombre}}</td>
                               <td>{{$Asignacions->descripcion}}</td>
                               <td align="center">
@@ -73,7 +73,7 @@
               <div class="panel-heading">
                 <div class="row">
                   <div class="col col-xs-6">
-                    <h3 class="panel-title">Panel Proyectos</h3>
+                    <h3 class="panel-title">Proyectos</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
                     <a href="{{route('Asignacion.create')}}" class="btn btn-primary">
@@ -101,7 +101,7 @@
                                 <a href="{{route('Asignacion.edit',$Asignacions->id)}}" class="btn btn-default"><em class="fa fa-pencil"></em></a>
                                 <a href="{{route('Asignacion.destroy',$Asignacions->id)}}" onclick="return confirm('¿Seguro que seas eliminar?')" class="btn btn-danger"><em class="fa fa-trash"></em></a>
                               </td>
-                              <td class="hidden-xs">{{$Asignacions->tipo}}</td>
+                              <td class="hidden-xs">{{$Asignacions->id}}</td>
                               <td>{{$Asignacions->nombre}}</td>
                               <td>{{$Asignacions->descripcion}}</td>
                               <td align="center">
@@ -130,7 +130,7 @@
               <div class="panel-heading">
                 <div class="row">
                   <div class="col col-xs-6">
-                    <h3 class="panel-title">Panel Asignaciones</h3>
+                    <h3 class="panel-title">Asignaciones</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
                     <a href="{{route('Asignacion.create')}}" class="btn btn-primary">
@@ -158,7 +158,7 @@
                                 <a href="{{route('Asignacion.edit',$Asignacions->id)}}" class="btn btn-default"><em class="fa fa-pencil"></em></a>
                                 <a href="{{route('Asignacion.destroy',$Asignacions->id)}}" onclick="return confirm('¿Seguro que seas eliminar?')" class="btn btn-danger"><em class="fa fa-trash"></em></a>
                               </td>
-                              <td class="hidden-xs">{{$Asignacions->tipo}}</td>
+                              <td class="hidden-xs">{{$Asignacions->id}}</td>
                               <td>{{$Asignacions->nombre}}</td>
                               <td>{{$Asignacions->descripcion}}</td>
                               <td align="center">
