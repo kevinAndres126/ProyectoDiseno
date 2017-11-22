@@ -1,14 +1,14 @@
-@extends('layouts.app')
+@extends('home')
 
 
-@section('content')
+@section('subcontent')
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
 
 <div class="container">
     <div class="row">
 
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-12 col-md-offset-0">
 
             <div class="panel panel-default panel-table">
               <div class="panel-heading">

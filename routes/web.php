@@ -29,6 +29,11 @@ Route::group(['prefix'=> 'Grupo'], function(){
     ]);
 });
 
+Route::prefix('perfil')->group(function() {
+    Route::resource('perfil','PerfilController');
+
+});
+
 
 Route::group(['prefix'=> 'Asignacion'], function(){
 
@@ -41,4 +46,3 @@ Route::group(['prefix'=> 'Asignacion'], function(){
 
 Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToProvider')->name('social.auth');
 Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');
-

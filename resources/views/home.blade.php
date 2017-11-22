@@ -2,37 +2,23 @@
 
 @section('content')
 <div class="container">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">{{ Auth::user()->name }}</div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <p>Nombre:</p>
-                                <p><strong>{{ Auth::user()->name }}</strong></p>
-                                <hr>
-                                <p>Email:</p>
-                                <p><strong>{{ Auth::user()->email }}</strong></p>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="{{ Auth::user()->avatar }}" alt="{{ Auth::user()->name }}" class="img-responsive img-thumbnail">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Dashboard</div>
-
-                    <div class="panel-body">
-                        You are logged in!
-                    </div>
-                </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{route('Grupo.index')}}">Grupos</a>
+                <a class="navbar-brand" href="{{route('Asignacion.index')}}">Asignaciones</a>
+                <a class="navbar-brand" href="#">Usuarios</a>
+                <a class="navbar-brand" href="{{route('perfil.index')}}">Perfil</a>
             </div>
         </div>
-    </div>
+    </nav>
+    @yield('subcontent')
 </div>
 @endsection
