@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Grupo extends Model
 {
@@ -13,7 +14,15 @@ class Grupo extends Model
 
     public function scopeSearch($query,$nombre)
     {
-    	return $query ->where('nombre', 'LIKE',"%$nombre%");
+    	$id = Auth::id();
+
+    	return $query ->whereHas('nombre', 'LIKE',"%$nombre%",function());
+
+
+
+    return $query->whereHas('categories', function($q) use ($categoryId){
+        $q->where('id', $categoryId)
+
     }
 
 }

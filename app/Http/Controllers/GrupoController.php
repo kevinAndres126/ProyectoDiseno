@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Grupo;
+use App\Asignacion;
+use Illuminate\Support\Facades\Auth;
+
 
 class GrupoController extends Controller
 {
@@ -16,6 +20,16 @@ class GrupoController extends Controller
     {
 
         $Grupo = Grupo::Search($request->nombre)->orderBy('id','ASC')->paginate(100);
+        
+        $id = Auth::id();
+        $Grupo = DB::table('grupo')
+                ->where('id_persona', '=', $id)
+                ->get();
+        #$Grupo = DB::table('grupo')
+         #       ->join('users','grupo.id_persona', '=', 'users.id')
+          #      ->select('grupo.*')
+           #     ->get();
+        
         return view('Grupo.GrupoMain')->with('Grupo',$Grupo);
     }
 
@@ -53,8 +67,13 @@ class GrupoController extends Controller
     public function show($id)
     {
         //
-        $Grupo =Grupo::find($id);
-        return view('Grupo.Ver')->with('Grupo',$Grupo);
+        #$Grupo =Grupo::find($id);
+        $Asignacion = Asignacion::orderBy('id','ASC')->paginate(100);
+
+        
+        
+        return view('Asignacion.AsignacionMain')->with('Asignacion',$Asignacion);
+        #return view('Grupo.Ver')->with('Grupo',$Grupo);
     }
 
     /**
