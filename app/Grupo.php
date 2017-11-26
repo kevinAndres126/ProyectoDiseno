@@ -16,13 +16,9 @@ class Grupo extends Model
     {
     	$id = Auth::id();
 
-    	return $query ->whereHas('nombre', 'LIKE',"%$nombre%",function());
-
-
-
-    return $query->whereHas('categories', function($q) use ($categoryId){
-        $q->where('id', $categoryId)
-
-    }
-
+    	return $query ->where('nombre', 'LIKE',"%$nombre%")
+    				  ->where(function($valirID) use ($id){
+    				  $valirID->where('id_persona', '=',$id);
+    				  });
+	}
 }

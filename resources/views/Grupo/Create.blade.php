@@ -10,7 +10,7 @@
                 <div class="panel-heading">Crear Grupo</div>
                 <div class="panel-body">
                   
-        {!!Form::open(['route'=>'Grupo.store','method'=>'POST']) !!}
+        {!!Form::open(['route'=>['Grupo.store',$id],'method'=>'POST']) !!}
 
             <div class="form-group">
               {!!Form::label('Nombre','Nombre')!!}
@@ -23,9 +23,9 @@
             </div>
 
 
-            <div class="form-group">
+            <div class="form-group hidden">
               {!!Form::label('id_persona','id_persona')!!}
-              {!!Form::text('id_persona',null,['class'=>'form-control','placeholder'=>'id_persona','required'])!!}
+              {!!Form::text('id_persona',$id,['class'=>'form-control','placeholder'=>'id_persona',])!!}
             </div>
 
             <div class="form-group">

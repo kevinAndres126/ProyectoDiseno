@@ -19,7 +19,7 @@ class GrupoController extends Controller
     public function index(Request $request)
     {
 
-        $Grupo = Grupo::Search($request->nombre)->orderBy('id','ASC')->paginate(100);
+        
         
         $id = Auth::id();
         $Grupo = DB::table('grupo')
@@ -29,7 +29,8 @@ class GrupoController extends Controller
          #       ->join('users','grupo.id_persona', '=', 'users.id')
           #      ->select('grupo.*')
            #     ->get();
-        
+        $Grupo = Grupo::Search($request->nombre)->orderBy('id','ASC')->paginate(100);
+
         return view('Grupo.GrupoMain')->with('Grupo',$Grupo);
     }
 
@@ -40,7 +41,9 @@ class GrupoController extends Controller
      */
     public function create()
     {
-        return view('Grupo.Create');
+
+         $id = Auth::id();
+        return view('Grupo.Create')->with('id',$id);
     }
 
     /**
@@ -66,6 +69,8 @@ class GrupoController extends Controller
      */
     public function show($id)
     {
+
+
         //
         #$Grupo =Grupo::find($id);
         $Asignacion = Asignacion::orderBy('id','ASC')->paginate(100);

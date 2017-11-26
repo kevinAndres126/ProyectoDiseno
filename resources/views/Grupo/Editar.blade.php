@@ -22,7 +22,7 @@
 							{!!Form::text('descripcion',$Grupo->descripcion,['class'=>'form-control','placeholder'=>'Descripcion','required'])!!}
 						</div>
 
-						<div class="form-group">
+						<div class="form-group hidden">
 							{!!Form::label('id_persona','id_persona')!!}
 							{!!Form::text('id_persona',$Grupo->id_persona,['class'=>'form-control','placeholder'=>'id_persona','required'])!!}
 						</div>
