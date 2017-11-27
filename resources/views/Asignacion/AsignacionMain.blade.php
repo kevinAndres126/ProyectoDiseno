@@ -7,9 +7,6 @@
 
 <div class="container">
     <div class="row">
-
-        <div class="col-md-10 col-md-offset-1">
-
             <div class="panel panel-default panel-table">
               <div class="panel-heading">
                 <div class="row">
@@ -24,34 +21,28 @@
               </div>
               <div class="panel-body">
                 <table class="table table-striped table-bordered table-list">
-                  <thead>
-                    <tr>
-                        <th><em class="fa fa-cog"></em></th>
-                        <th class="hidden-xs">ID</th>
-                        <th>Nombre</th>
-                        <th>Descripcion</th>
-                        <th></th>
-                    </tr>
-                  </thead>
                   <tbody>
-                    
                     @foreach($Asignacion as $Asignacions)
                       <?php if ($Asignacions['tipo'] == 'Tarea'): ?>
                             <tr>
-                              <td align="center">
-                                <a href="{{route('Asignacion.edit',$Asignacions->id)}}" class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                                <a href="{{route('Asignacion.destroy',$Asignacions->id)}}" onclick="return confirm('¿Seguro que seas eliminar?')" class="btn btn-danger"><em class="fa fa-trash"></em></a>
-                              </td>
-                              <td class="hidden-xs">{{$Asignacions->id}}</td>
-                              <td>{{$Asignacions->nombre}}</td>
-                              <td>{{$Asignacions->descripcion}}</td>
-                              <td align="center">
-                                <a href="{{route('Asignacion.show',$Asignacions->id)}}"  class="btn btn-default"><em class="fa fa-eye"></em></a>
-                              </td>
+                              <div class="col-lg-4" >
+                                  <div class="panel-primary class" >
+                                      <div class="panel-heading">
+                                        
+                                        <a href="{{route('Asignacion.show',$Asignacions->id)}}"  class="text-danger">{{$Asignacions->nombre}}</a>
+                                      </div>
+                                      <div class="panel-body">
+                                          {{$Asignacions->descripcion}}
+                                      </div>
+                                      <div class="panel-footer">
+                                          <a href="{{route('Asignacion.edit',$Asignacions->id)}}" class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                                          <a href="{{route('Asignacion.destroy',$Asignacions->id)}}" onclick="return confirm('¿Seguro que seas eliminar?')" class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
                             </tr>
-
                         <?php endif ?>
-
                       @endforeach
                     </tbody>
                 </table>
@@ -59,16 +50,12 @@
               </div>
 
             </div>
-
-</div></div></div>
+</div></div>
 
 
 
 <div class="container">
     <div class="row">
-
-        <div class="col-md-10 col-md-offset-1">
-
             <div class="panel panel-default panel-table">
               <div class="panel-heading">
                 <div class="row">
@@ -83,30 +70,27 @@
               </div>
               <div class="panel-body">
                 <table class="table table-striped table-bordered table-list">
-                  <thead>
-                    <tr>
-                        <th><em class="fa fa-cog"></em></th>
-                        <th class="hidden-xs">ID</th>
-                        <th>Nombre</th>
-                        <th>Descripcion</th>
-                        <th></th>
-                    </tr>
-                  </thead>
                   <tbody>
                     
                     @foreach($Asignacion as $Asignacions)
                       <?php if ($Asignacions['tipo'] == 'Proyecto'): ?>
                             <tr>
-                              <td align="center">
-                                <a href="{{route('Asignacion.edit',$Asignacions->id)}}" class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                                <a href="{{route('Asignacion.destroy',$Asignacions->id)}}" onclick="return confirm('¿Seguro que seas eliminar?')" class="btn btn-danger"><em class="fa fa-trash"></em></a>
-                              </td>
-                              <td class="hidden-xs">{{$Asignacions->id}}</td>
-                              <td>{{$Asignacions->nombre}}</td>
-                              <td>{{$Asignacions->descripcion}}</td>
-                              <td align="center">
-                                <a href="{{route('Asignacion.show',$Asignacions->id)}}"  class="btn btn-default"><em class="fa fa-eye"></em></a>
-                              </td>
+                              <div class="col-lg-4" >
+                                  <div class="panel-primary class" >
+                                      <div class="panel-heading">
+                                        
+                                        <a href="{{route('Asignacion.show',$Asignacions->id)}}"  class="text-danger">{{$Asignacions->nombre}}</a>
+                                      </div>
+                                      <div class="panel-body">
+                                          {{$Asignacions->descripcion}}
+                                      </div>
+                                      <div class="panel-footer">
+                                          <a href="{{route('Asignacion.edit',$Asignacions->id)}}" class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                                          <a href="{{route('Asignacion.destroy',$Asignacions->id)}}" onclick="return confirm('¿Seguro que seas eliminar?')" class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
                             </tr>
 
                         <?php endif ?>
@@ -118,14 +102,10 @@
               </div>
 
             </div>
-
-</div></div></div>
+</div></div>
 
 <div class="container">
     <div class="row">
-
-        <div class="col-md-10 col-md-offset-1">
-
             <div class="panel panel-default panel-table">
               <div class="panel-heading">
                 <div class="row">
@@ -140,30 +120,27 @@
               </div>
               <div class="panel-body">
                 <table class="table table-striped table-bordered table-list">
-                  <thead>
-                    <tr>
-                        <th><em class="fa fa-cog"></em></th>
-                        <th class="hidden-xs">ID</th>
-                        <th>Nombre</th>
-                        <th>Descripcion</th>
-                        <th></th>
-                    </tr>
-                  </thead>
                   <tbody>
                     
                     @foreach($Asignacion as $Asignacions)
                       <?php if ($Asignacions['tipo'] == 'Asignacion'): ?>
                             <tr>
-                              <td align="center">
-                                <a href="{{route('Asignacion.edit',$Asignacions->id)}}" class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                                <a href="{{route('Asignacion.destroy',$Asignacions->id)}}" onclick="return confirm('¿Seguro que seas eliminar?')" class="btn btn-danger"><em class="fa fa-trash"></em></a>
-                              </td>
-                              <td class="hidden-xs">{{$Asignacions->id}}</td>
-                              <td>{{$Asignacions->nombre}}</td>
-                              <td>{{$Asignacions->descripcion}}</td>
-                              <td align="center">
-                                <a href="{{route('Asignacion.show',$Asignacions->id)}}" class="btn btn-default"><em class="fa fa-eye"></em></a>
-                              </td>
+                              <div class="col-lg-4" >
+                                  <div class="panel-primary class" >
+                                      <div class="panel-heading">
+                                        
+                                        <a href="{{route('Asignacion.show',$Asignacions->id)}}"  class="text-danger">{{$Asignacions->nombre}}</a>
+                                      </div>
+                                      <div class="panel-body">
+                                          {{$Asignacions->descripcion}}
+                                      </div>
+                                      <div class="panel-footer">
+                                          <a href="{{route('Asignacion.edit',$Asignacions->id)}}" class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                                          <a href="{{route('Asignacion.destroy',$Asignacions->id)}}" onclick="return confirm('¿Seguro que seas eliminar?')" class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
                             </tr>
 
                         <?php endif ?>
@@ -175,8 +152,7 @@
               </div>
 
             </div>
-
-</div></div></div>
+</div></div>
 
 
 @endsection
