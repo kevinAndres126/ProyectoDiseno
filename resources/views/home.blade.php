@@ -15,7 +15,7 @@
                 </button>
                 <a class="navbar-brand" href="{{route('Grupo.index')}}">Grupos</a>
                 <a class="navbar-brand" href="{{route('Asignacion.index')}}">Asignaciones</a>
-                <a class="navbar-brand" href="#">Usuarios</a>
+                <a class="navbar-brand" href="{{route('integranteGrupo.index')}}">Usuarios</a>
                 <a class="navbar-brand" href="{{route('perfil.index')}}">Perfil</a>
             </div>
         </div>

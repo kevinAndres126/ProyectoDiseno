@@ -46,3 +46,13 @@ Route::group(['prefix'=> 'Asignacion'], function(){
 
 Route::get('auth/{provider}', 'Auth\SocialAuthController@redirectToProvider')->name('social.auth');
 Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');
+
+
+Route::group(['prefix'=> 'integranteGrupo'], function(){
+
+  Route::resource('integranteGrupo','integranteGrupoController');
+  Route::get('integranteGrupo/{id}/destroy',[
+    'uses' => 'integranteGrupoController@destroy',
+    'as'   => 'integranteGrupo.destroy'
+    ]);
+});

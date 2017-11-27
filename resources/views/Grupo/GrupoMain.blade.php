@@ -7,9 +7,6 @@
 
 <div class="container">
     <div class="row">
-
-       
-
             <div class="panel panel-default panel-table">
               <div class="panel-heading">
                 <div class="row">
